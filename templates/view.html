@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>theboys</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+        body { font-family: "JetBrains Mono", serif; }
+    </style>
+</head>
+<body class="bg-white-100">
+    <nav class="flex justify-between items-center p-4 text-white bg-[#54A5FD]">
+        <div class="text-2xl font-bold animate-bounce">theboys</div>
+        <ul class="flex md:space-x-6 space-x-3 md:text-[16px] text-[13px]">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Service</a></li>
+        </ul>
+    </nav>
+
+    <div class="container mx-auto p-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6 mt-4">MBSD - Air Quality Monitoring</h2>
+
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse bg-white shadow-md rounded-lg overflow-hidden">
+                <thead class="bg-[#9018CD] text-white">
+                    <tr>
+                        <th class="p-3 text-left">Temp (°C)</th>
+                        <th class="p-3 text-left">Temp (°F)</th>
+                        <th class="p-3 text-left">Humidity (%)</th>
+                        <th class="p-3 text-left">Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-300">
+                    {% if data %}
+                        {% for row in data %}
+                            <tr class='hover:bg-gray-100'>
+                                <td class='p-3'>{{ row.temp_c }}</td>
+                                <td class='p-3'>{{ row.temp_f }}</td>
+                                <td class='p-3'>{{ row.humidity }}</td>
+                                <td class='p-3'>{{ row.timestamp }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr><td colspan='4' class='p-3 text-center text-gray-500'>No data available</td></tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
