@@ -7,14 +7,14 @@ def get_db_connection():
         user="u481156254_mbsd",
         password="|5gP2?A#l7",
         database="u481156254_quality",
-        cursorclass=pymysql.cursors.DictCursor  # ✅ Use DictCursor here
+        cursorclass=pymysql.cursors.DictCursor  
     )
 
 def fetch_sensor_data():
     conn = get_db_connection()
-    cursor = conn.cursor()  # ❌ Remove `dictionary=True`
+    cursor = conn.cursor() 
     
-    cursor.execute("SELECT * FROM sensor_data")  # Change to your actual table
+    cursor.execute("SELECT * FROM sensor_data")  
     data = cursor.fetchall()
     
     conn.close()
