@@ -1,0 +1,80 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 13% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 13% 13%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 13% 13%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 65% 58%;
+    --primary-foreground: 220 13% 10%;
+
+    --secondary: 220 13% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 13% 18%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 220 13% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 67.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 18%;
+    --input: 220 13% 18%;
+    --ring: 142 65% 58%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 13% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 142 65% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 13% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 13% 18%;
+    --sidebar-ring: 142 65% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-airvibe-darkbg text-foreground;
+  }
+  
+  .data-card {
+    @apply bg-airvibe-cardbg rounded-2xl p-4 shadow-lg;
+  }
+  
+  .data-value {
+    @apply text-5xl font-bold;
+  }
+  
+  .data-label {
+    @apply text-muted-foreground text-sm;
+  }
+  
+  .metric-good {
+    @apply text-airvibe-green;
+  }
+  
+  .metric-medium {
+    @apply text-airvibe-yellow;
+  }
+  
+  .metric-bad {
+    @apply text-airvibe-red;
+  }
+}
