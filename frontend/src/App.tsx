@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
 import Sense from "./pages/Sense";
+import ScriptPage from "./pages/Script";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import NotFound from "./pages/NotFound";
@@ -21,8 +22,9 @@ const App = () => (
       <BrowserRouter>
         <Layout>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />}/>
             <Route path="/sense" element={<Sense />} />
+            <Route path="/upload_script" element={<ScriptPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="*" element={<NotFound />} />

@@ -18,9 +18,9 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="bg-gradient-to-br from-airvibe-blue to-airvibe-blue rounded-full p-1">
+              {/* <div className="bg-gradient-to-br from-airvibe-blue to-airvibe-blue rounded-full p-1">
                 <Droplets className="h-6 w-6 text-white" />
-              </div>
+              </div> */}
               <span className="text-xl font-bold">AirVibe</span>
             </Link>
           </div>
@@ -41,6 +41,10 @@ const Navbar: React.FC = () => {
             <NavLink to="/services" active={isActive('/services')}>
               <Settings className="h-4 w-4 mr-2" />
               Services
+            </NavLink>
+            <NavLink to="/upload_script" active={isActive('/upload_script')}>
+              <Settings className="h-4 w-4 mr-2" />
+              Editor
             </NavLink>
           </div>
           

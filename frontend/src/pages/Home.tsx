@@ -15,7 +15,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Monitor Your Air, <span className="text-airvibe-blue">Optimize Your Life</span>
+              Monitor Your Air, <span className="text-airvibe-blue font-airvibe-Boldonse">Optimize Your Life</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               AirVibe helps you track, analyze, and improve the air quality in your home or office with real-time data and actionable insights.

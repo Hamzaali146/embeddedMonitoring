@@ -8,6 +8,7 @@ import MetricChart from '@/components/dashboard/MetricChart';
 import RoomCard from '@/components/dashboard/RoomCard';
 import { Thermometer, Droplets, ArrowUp, ArrowDown } from 'lucide-react';
 import { getRoomsData, getCurrentReadings, getOutdoorReadings, RoomData } from '@/services/airQualityService';
+import { log } from 'console';
 
 interface SensorData {
   id: number;
@@ -28,7 +29,9 @@ const Sense = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/data");
+      const response = await fetch("https://beigelist.onpella.app/api/data");
+      console.log("Fetching data from API:", response);
+      
       const data: SensorData[] = await response.json();
 
       const sortedData = data.sort((a, b) => 
@@ -117,7 +120,7 @@ const Sense = () => {
           title="Humidity"
           value={currentReadings.humidity}
           unit="%"
-          icon={<Droplets className="h-5 w-5 text-white" />}
+          icon={<Droplets className="h-5 w-5 text-blue" />}
           status={getHumidityStatus(currentReadings.humidity)}
           subtitle="Indoor Average"
         />
@@ -221,7 +224,7 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({
         </div>
       </div>
       <div className="flex items-center mt-2">
-        <div className={`text-sm font-medium ${isPositive ? 'text-airvibe-red' : 'text-airvibe-green'}`}>
+        <div className={`text-sm font-medium ${isPositive ? 'text-airvibe-red' : 'text-airvibe-blue'}`}>
           {isPositive ? <ArrowUp className="h-4 w-4 inline mr-1" /> : <ArrowDown className="h-4 w-4 inline mr-1" />}
           {Math.abs(diff).toFixed(1)} {unit} {isPositive ? 'higher' : 'lower'}
         </div>

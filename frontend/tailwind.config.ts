@@ -71,7 +71,10 @@ export default {
 					blue: '#54A5FD',
 					darkbg: '#0E1015',
 					cardbg: '#1A1D24',
-					graybg: '#2A2D36'
+					graybg: '#2A2D36', 
+					airwhite: '#F7FBFD',
+					shade: "#DEF3FF",
+					pureb: "#000000",
 				}
 			},
 			borderRadius: {
@@ -79,6 +82,11 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			fontFamily: {
+                inter : ['Inter', 'sans-serif'], // Replace 'Inter' with your font name
+                // You can add more fonts here
+				Boldonse : ['Boldonse', 'sans-serif'],
+            },
 			keyframes: {
 				'accordion-down': {
 					from: {

@@ -10,7 +10,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1 pt-20 pb-10 px-4 md:px-6">
+      <main className="flex-1 pt-20 pb-10 px-4 md:px-6 ">
         {children}
       </main>
       <footer className="py-6 px-4 bg-airvibe-cardbg border-t border-airvibe-graybg">

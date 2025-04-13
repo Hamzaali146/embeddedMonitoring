@@ -2,7 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @layer base {
   :root {
     --background: 220 13% 10%;
@@ -52,6 +52,7 @@
   }
   body {
     @apply bg-airvibe-darkbg text-foreground;
+    font-family: "Inter", sans-serif;
   }
   
   .data-card {
