@@ -29,7 +29,7 @@ const Sense = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("https://beigelist.onpella.app/api/data");
+      const response = await fetch("http://127.0.0.1:5000/api/data");
       console.log("Fetching data from API:", response);
       
       const data: SensorData[] = await response.json();
